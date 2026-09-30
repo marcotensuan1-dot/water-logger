@@ -1,0 +1,27 @@
+
+body{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    background-color: azure;
+}
+
+.outer-cup{
+    height: 210px;
+    width: 210px;
+    border: 10px solid black;
+    border-radius: 20px 20px 60px 60px; 
+    margin-top: 80px;
+    overflow: hidden;
+}
+
+.inner-cup{
+    height: 0%;
+    width: 100%;
+    border: none;
+    background-color: dodgerblue;
+
+    transition: width 0.3s ease;
+}
+
+

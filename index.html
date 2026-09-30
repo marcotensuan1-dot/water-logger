@@ -4,8 +4,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Water Tracker App</title>
+    <link rel="stylesheet" href="styles/styles.css">
+
+    <style>
+        .title{
+            font-family: sans-serif;
+            text-align: center;
+        }
+
+        #current-intake{
+            font-family: sans-serif;
+            text-align: center;
+        }
+    </style>
 </head>
+
 <body>
-    
+    <div class="title">
+        <h1>Water Tracker</h1>
+    </div>
+
+    <div class="outer-cup">
+        <div class="inner-cup"></div>
+    </div>
+
+    <div class="control-panel">
+        <p id="current-intake">0 / 128oz (0%)</p>
+
+        <div class="add-btns">
+            <button id="eight-oz">8 oz</button>
+            <button id="twelve-oz">12 oz</button>
+            <button id="sixteen-oz">16 oz</button>
+            <button id="custom-oz">Custom oz</button>
+        </div>
+    </div>
+
 </body>
 </html>
