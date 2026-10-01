@@ -14,7 +14,8 @@ body{
     height: 210px;
     width: 210px;
     border: 10px solid black;
-    border-radius: 20px 20px 60px 60px; 
+    border-radius: 20px 20px 60px 60px;
+    position: relative; 
     overflow: hidden;
 }
 
@@ -22,8 +23,10 @@ body{
     height: 0%;
     width: 100%;
     border: none;
+    bottom: 0;
+    position: absolute;
     background-color: dodgerblue;
-
+    
     transition: height 0.3s ease;
 }
 
@@ -47,11 +50,29 @@ body{
     cursor: pointer;
 }
 
+#reset-btn{
+    font-size: 20px;
+    height: 30px;
+    text-align: center;
+    background-color: gray;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
 button:hover{
     font-size: 25px;
     height: 30px;
     text-align: center;
     background-color: navy;
+}
+
+#reset-btn:hover{
+    font-size: 25px;
+    height: 30px;
+    text-align: center;
+    background-color: maroon;
 }
 
 
