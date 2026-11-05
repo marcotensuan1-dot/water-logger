@@ -22,8 +22,9 @@ let waterLevel = document.getElementsByClassName("inner-cup")[0];
 // Add water function
 function addWater(num){
     console.log("ADD FUNCTION DEBUG: adding: " + num);
+    history.push(currentAmount); // pushes history before any change
+
     currentAmount = currentAmount + num;
-    history.push(currentAmount);
 
     let currentPercentage = ((currentAmount / goalAmount) * 100).toFixed(1);
     waterLevel.style.height = `${currentPercentage}%`;
@@ -71,6 +72,7 @@ addCustom.addEventListener("click", function(){
     console.log("CUSTOM VAL DEBUG: Custom val pressed");
     addCustom.style.display=`none`;
     resetButon.style.display = `none`;
+    undoButton.style.dislay = `none`;
     customText.style.display = `inline-block`;
     customText.focus();
 });
@@ -103,6 +105,19 @@ customText.addEventListener("keydown", function(event){
 });
 
 // undo button
-undoButton.addEventListener("click", fuction(){
+undoButton.addEventListener("click", function(){
 
+    if(history.length > 0){
+        currentAmount = history.pop();
+
+        // Update cup UI
+        let currentPercentage = ((currentAmount / goalAmount) * 100).toFixed(1);
+        waterLevel.style.height = `${currentPercentage}%`;
+        intakeText.innerText = `${currentAmount} / ${goalAmount} (${currentPercentage}%)`;
+        console.log("UNDO DEBUG: Undid");
+    }
+
+    else{
+        console.log("UNDO DEBUG: Nothing to undo")
+    }
 });
