@@ -75,4 +75,31 @@ button:hover{
     background-color: maroon;
 }
 
+#customWaterAmount {
+    display: none; 
+    color: white;
+    background-color: dodgerblue;
+    padding: 8px 12px;
+    font-size: 1rem;
+    text-align: center;
+    width: 140px;
 
+    border-radius: 6px;
+    outline: none;
+    box-sizing: border-box;
+    vertical-align: middle; 
+}
+
+/* Blue border when in focus */
+#customWaterAmount:focus {
+    border-color: navy; 
+}
+
+#customWaterAmount::placeholder{
+    color: white;
+}
+
+#customWaterAmount:hover{
+    border: 2px solid;
+    border-color: gray;
+}

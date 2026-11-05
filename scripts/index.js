@@ -33,7 +33,7 @@ addEight.addEventListener("click", function(){
     console.log("After add 8: " + currentAmount);
 
     // update css of cup 
-    let currentPercentage = (currentAmount / goalAmount) * 100;
+    let currentPercentage = ((currentAmount / goalAmount) * 100).toFixed(1);
     waterLevel.style.height = `${currentPercentage}%`;
 
     intakeText.innerText = `${currentAmount} / ${goalAmount} (${currentPercentage}%)`
@@ -46,7 +46,7 @@ addTwelve.addEventListener("click", function(){
     currentAmount = currentAmount + 12;
     console.log("After add 12: " + currentAmount);
 
-    let currentPercentage = (currentAmount / goalAmount) * 100;
+    let currentPercentage = ((currentAmount / goalAmount) * 100).toFixed(1);
     waterLevel.style.height = `${currentPercentage}%`;
 
     intakeText.innerText = `${currentAmount} / ${goalAmount} (${currentPercentage}%)`
@@ -59,7 +59,7 @@ addSixteen.addEventListener("click", function(){
     currentAmount = currentAmount + 16;
     console.log("After add 16: " + currentAmount);
 
-    let currentPercentage = (currentAmount / goalAmount) * 100;
+    let currentPercentage = ((currentAmount / goalAmount) * 100).toFixed(1);
     waterLevel.style.height = `${currentPercentage}%`;
 
     intakeText.innerText = `${currentAmount} / ${goalAmount} (${currentPercentage}%)`
@@ -89,14 +89,14 @@ customText.addEventListener("keydown", function(event){
 
             console.log("CUSTOM VAL DEBUG: amt after add: " + currentAmount);
 
-            let currentPercentage = (currentAmount / goalAmount) * 100;
+            let currentPercentage = ((currentAmount / goalAmount) * 100).toFixed(1);
             waterLevel.style.height = `${currentPercentage}%`;
 
             intakeText.innerText = `${currentAmount} / ${goalAmount} (${currentPercentage}%)`
             console.log(intakeText);
 
             customText.value = "";
-            userAmt.style.display="none";
+            customText.style.display="none";
             addCustom.style.display = `inline-block`;
             resetButon.style.display = `inline-block`;
 
@@ -104,6 +104,7 @@ customText.addEventListener("keydown", function(event){
 
         else{
             console.log("custom amt error");
+            customText.value = "Invalid Input :("
         }
     }   
 });
