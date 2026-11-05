@@ -32,7 +32,7 @@ addEight.addEventListener("click", function(){
     currentAmount = currentAmount + 8;
     console.log("After add 8: " + currentAmount);
 
-    // update css of cup 
+    // update css of cup.
     let currentPercentage = ((currentAmount / goalAmount) * 100).toFixed(1);
     waterLevel.style.height = `${currentPercentage}%`;
 
