@@ -156,3 +156,38 @@ body{
     height: 50px;
 }
 
+/* Modal View */
+.modal{
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content{
+    background-color: white;
+    border-radius: 10px;
+    width: 250px;
+    text-align: center;
+}
+
+.modal-content h2{
+    margin-top: 0;
+    font-family: sans-serif;
+    font-size: 20px;
+}
+
+.modal-content input{
+    border: none;
+    text-align: center;
+}
+
+.modal-content button{
+    border: none;
+    border-radius: 4px;
+    font-family: sans-serif;
+    font-size: 25px;
+    background-color: dodgerblue;
+    color: white;
+    margin: 5px;
+}
+

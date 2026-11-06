@@ -4,6 +4,8 @@ let goalAmount = 128;
 let history = []; // keep track of past amounts
 
 // Buttons
+const settingsButton = document.getElementById("settings-btn");
+
 let addEight = document.getElementById("eight-oz");
 let addTwelve = document.getElementById("twelve-oz");
 let addSixteen = document.getElementById("sixteen-oz");
@@ -18,6 +20,10 @@ let customText = document.getElementById("customWaterAmount");
 
 // Water level
 let waterLevel = document.getElementsByClassName("inner-cup")[0];
+
+// settings
+const settingsModal = document.getElementById("settings-modal");
+const closeModalButton = document.getElementById("close-modal");
 
 // Add water function
 function addWater(num){
@@ -121,3 +127,13 @@ undoButton.addEventListener("click", function(){
         console.log("UNDO DEBUG: Nothing to undo")
     }
 });
+
+settingsButton.addEventListener("click", function(){
+    settingsModal.style.display = 'flex';
+});
+
+closeModalButton.addEventListener("click", function(){
+    settingsModal.style.display = 'none';
+});
+
+
