@@ -6,22 +6,14 @@
     <title>Water Tracker App</title>
     <link rel="stylesheet" href="styles/styles.css">
     <script src="./scripts/index.js" defer></script>
-
-    <style>
-        .title{
-            font-family: sans-serif;
-            text-align: center;
-        }
-
-        #current-intake{
-            font-family: sans-serif;
-            text-align: center;
-        }
-    </style>
 </head>
 
 <body>
     <div class="title">
+        <button id="settings-btn">
+            <img src="./assets/images/settings.png" alt="Settings Button">
+        </button>
+        
         <h1>Water Tracker</h1>
     </div>
 
@@ -32,7 +24,7 @@
     <div class="control-panel">
         <p id="current-intake">0 / 128oz (0%)</p>
 
-        <div class="buttons">
+        <div class="control-buttons">
 
             <button id="eight-oz" class="add-btns">8 oz</button>
             <button id="twelve-oz" class="add-btns">12 oz</button>
