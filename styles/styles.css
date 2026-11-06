@@ -61,6 +61,17 @@ body{
     cursor: pointer;
 }
 
+#undo-btn{
+    font-size: 20px;
+    height: 30px;
+    text-align: center;
+    background-color: gray;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
 button:hover{
     font-size: 25px;
     height: 30px;
@@ -72,7 +83,14 @@ button:hover{
     font-size: 25px;
     height: 30px;
     text-align: center;
-    background-color: maroon;
+    background-color: darkred;
+}
+
+#undo-btn:hover{
+    font-size: 25px;
+    height: 30px;
+    text-align: center;
+    background-color: darkred;
 }
 
 #customWaterAmount {
