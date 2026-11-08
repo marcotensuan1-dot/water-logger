@@ -19,8 +19,25 @@
             <!--Modal content-->
             <div class="modal-content">
                 <h2 id="settings-header">Settings</h2>
+
+                <!-- Water Goal -->
                 <label style="font-size: 20px">Daily Water Goal: </label><br>
                 <input id="custom-daily-goal" type="text" name="water goal" placeholder="128"><br>
+
+                <!-- Change Water Color-->
+                <label style="font-size: 20px">Water Color</label><br>
+
+                <select name="waterColors" id="colorSelector" style="font-size: 20px" >
+                    <option value="" disabled selected hidden>ex: Blue</option>
+                    <option value="dodgerblue">Blue</option>
+                    <option value="green">Green</option>
+                    <option value="red">Red</option>
+                    <option value="pink">Pink</option>
+                </select>
+                <br>
+                
+
+                <!-- Close Button -->
                 <button id="close-modal">Close</button>
             </div>
         </div>
