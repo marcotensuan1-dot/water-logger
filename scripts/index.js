@@ -24,6 +24,7 @@ let waterLevel = document.getElementsByClassName("inner-cup")[0];
 // settings
 const settingsModal = document.getElementById("settings-modal");
 const closeModalButton = document.getElementById("close-modal");
+let colorSelector = document.getElementById("colorSelector");
 let goalInput = document.getElementById("custom-daily-goal");
 
 // Add water function
@@ -163,8 +164,12 @@ goalInput.addEventListener("keydown", function(event){
 
         }
     }
-
 });
 
+colorSelector.addEventListener("change", function(){
+    let selectedColor = colorSelector.value;
+    waterLevel.style.backgroundColor = selectedColor;
+    console.log("DEBUG COLOR CHANGE: color changed to: " + selectedColor);
+});
 
 

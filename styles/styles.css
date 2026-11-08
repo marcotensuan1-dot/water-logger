@@ -203,3 +203,11 @@ body{
     margin: 5px;
 }
 
+#colorSelector{
+    margin: 5px;
+    text-align: center;
+    border-color: gray;
+    border-radius: 5px;
+    width: 200px;
+    height: 40px;
+}
