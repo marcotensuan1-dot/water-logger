@@ -2,6 +2,7 @@
 let currentAmount = 0;
 let goalAmount = 128;
 let history = []; // keep track of past amounts
+let completionCounter = 0;
 
 // Buttons
 const settingsButton = document.getElementById("settings-btn");
@@ -41,12 +42,30 @@ function addWater(num){
     console.log(intakeText);
     console.log(history);
 
+    // Completion
+    if(currentAmount >= goalAmount && completionCounter < 1){
+        console.log("CONFETTI DEBUG: confetti triggered");
+        completionCounter++;  
+
+        let sound = new Audio("./assets/audios/complete.mp3");
+        sound.play();
+        
+        confetti({
+            particleCount: 100,
+            spread: 70,
+            origin: {y: 0.6},
+        });
+        console.log("CONFETTI DEBUG: counter: " + completionCounter);
+    }
+
 }
 
 // Button Functions
 resetButon.addEventListener("click", function(){
     history.push(currentAmount);
     console.log(history);
+    completionCounter = 0;
+    console.log("CONFETTI DEBUG: counter: " + completionCounter);
 
     currentAmount = 0;
     console.log("Post Reset Amount: " + currentAmount);
@@ -132,6 +151,7 @@ undoButton.addEventListener("click", function(){
     }
 });
 
+// Settings
 settingsButton.addEventListener("click", function(){
     settingsModal.style.display = 'flex';
     goalInput.placeholder = goalAmount;
