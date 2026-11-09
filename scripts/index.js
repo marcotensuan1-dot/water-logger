@@ -2,17 +2,19 @@
 let currentAmount = 0;
 let goalAmount = 128;
 let history = []; // keep track of past amounts
+
 let completionCounter = 0;
+const completionText = document.getElementById("completion-title")
 
 // Buttons
 const settingsButton = document.getElementById("settings-btn");
 
-let addEight = document.getElementById("eight-oz");
-let addTwelve = document.getElementById("twelve-oz");
-let addSixteen = document.getElementById("sixteen-oz");
-let addCustom = document.getElementById("custom-oz");
-let resetButon = document.getElementById("reset-btn");
-let undoButton = document.getElementById("undo-btn");
+const addEight = document.getElementById("eight-oz");
+const addTwelve = document.getElementById("twelve-oz");
+const addSixteen = document.getElementById("sixteen-oz");
+const addCustom = document.getElementById("custom-oz");
+const resetButon = document.getElementById("reset-btn");
+const undoButton = document.getElementById("undo-btn");
 
 
 // Intake text
@@ -47,9 +49,10 @@ function addWater(num){
         console.log("CONFETTI DEBUG: confetti triggered");
         completionCounter++;  
 
+        completionText.style.display = `inline-block`;
         let sound = new Audio("./assets/audios/complete.mp3");
         sound.play();
-        
+
         confetti({
             particleCount: 100,
             spread: 70,
@@ -64,6 +67,8 @@ function addWater(num){
 resetButon.addEventListener("click", function(){
     history.push(currentAmount);
     console.log(history);
+
+    completionText.style.display = `none`;
     completionCounter = 0;
     console.log("CONFETTI DEBUG: counter: " + completionCounter);
 

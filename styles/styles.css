@@ -7,6 +7,20 @@
     font-family: sans-serif;
     text-align: center;
 }
+
+#completion-title{
+    display: none;
+    position: absolute;
+    top: 80px;
+    left: 50%;
+    transform: translateX(-50%); 
+    font-family: sans-serif;
+    text-align: center;
+    font-size: 40px;
+    color: black;
+    white-space: nowrap;
+    margin-top: 70px;
+}
 body{
     display: grid;
     justify-items: center;
